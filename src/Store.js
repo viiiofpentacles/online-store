@@ -2,11 +2,8 @@ import ItemCard from './ItemCard';
 
 const Store = (props) => {
     const itemCards = props?.data?.map((item => {
-        return <ItemCard data = {item} addItemToCart = {handleAddToCard} key = {item.id}/>
+        return <ItemCard data = {item} addItemToCart = {props.handleAddItemToCartState()} key = {item.id}/>
     }));
-
-    function handleAddToCard() {
-    }
 
     return (
         <main>

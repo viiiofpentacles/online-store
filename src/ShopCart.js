@@ -1,7 +1,7 @@
 // goes into App as a footer, only visible with atleast one item in cart
 
 const ShopCart = (props) => {
-    const cartTotal = (props.appState.total).toFixed(2);
+    const cartTotal = (props.appState.totalCost).toFixed(2);
     
     return (
         <div className='cart'>

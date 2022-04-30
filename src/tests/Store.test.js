@@ -10,6 +10,7 @@ test('displays Store heading', () => {
 });
 
 test('renders all item cards', () => {
+    const mockAddItem = jest.fn();
     const mockData = [
         {
         name: 'Ice cream',
@@ -31,7 +32,7 @@ test('renders all item cards', () => {
       }
     ]
 
-    render(<Store data = {mockData}/>);
+    render(<Store data = {mockData} handleAddItemToCartState = {mockAddItem} />);
     const itemCards = screen.getAllByDisplayValue('1');
     expect(itemCards.length).toBe(3);
 });

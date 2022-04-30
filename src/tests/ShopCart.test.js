@@ -13,7 +13,7 @@ describe("Shopping Cart", () => {
             }
         ],
         totalQty: 1,
-        total: 14.00
+        totalCost: 14.00
     }
 
     it('shows item qty when there is 1 item in cart', () => {

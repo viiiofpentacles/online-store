@@ -23,3 +23,12 @@ test('renders 4 navigation links', () => {
   const links = screen.getAllByRole('link');
   expect(links.length).toBe(4);
 });
+
+test('does not render ShopCart when there are no items in cart', () => {
+  render(
+    <MemoryRouter initialEntries={['/']}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.queryByText(/checkout/i)).toBeNull();
+});
