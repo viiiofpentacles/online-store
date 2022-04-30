@@ -42,9 +42,10 @@ const ItemCard = (props) => {
             <div className="item-name">{props.data.name}</div>
             <div className="item-cost">{props.data.cost}</div>
             <div className="qty-input">
-                <button className="minus-button" onClick={reduceButton}>-</button>
-                <input type="text" value={qty} className="qty-input" onChange={handleChange} />
-                <button className="plus-button" onClick={increaseButton}>+</button>
+                <label htmlFor="qty-input">Quantity</label>
+                    <button className="minus-button" onClick={reduceButton}>-</button>
+                    <input type="text" value={qty} id="qty-input" onChange={handleChange} />
+                    <button className="plus-button" onClick={increaseButton}>+</button>
             </div>
             <button className="add-to-cart-button" onClick={addToCartButton}>Add to Cart</button>
         </div>
