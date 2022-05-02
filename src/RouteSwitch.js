@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
     BrowserRouter,
     Routes,
@@ -16,12 +16,10 @@ const RouteSwitch = () => {
   const [totalQty, setTotalQty] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
 
-  function handleAddItemToCartState () {
-      const itemName = document.querySelector('.item-name').textContent;
-      const itemQty = document.getElementById('qty-input').value;
-      const itemCost = document.querySelector('.item-cost').textContent;
+  function handleAddItemToCartState (itemName, itemCost, itemId) {
+      const itemQty = document.getElementById(`qty-input ${itemId}`).value;
       setCart(cart.concat({name: itemName, qty: itemQty}));
-      setTotalQty(totalQty + itemQty);
+      setTotalQty(totalQty + Number(itemQty));
       setTotalCost(totalCost + (itemCost *itemQty));
   }
 
