@@ -26,7 +26,7 @@ const ItemCard = (props) => {
     }
 
     function addToCartButton (e) {
-        props.addItemToCart(props.data.name, props.data.cost, props.data.id);
+        props.addItemToCart(props.data.cost, props.data.id);
         const addButton = e.target;
             addButton.textContent = 'Added!'
             addButton.disabled = true;

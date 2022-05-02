@@ -12,13 +12,27 @@ import About from './About';
 import Contact from './Contact';
 
 const RouteSwitch = () => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      6: 0
+    }
+  );
   const [totalQty, setTotalQty] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
 
-  function handleAddItemToCartState (itemName, itemCost, itemId) {
+  function handleAddItemToCartState (itemCost, itemId) {
       const itemQty = document.getElementById(`qty-input ${itemId}`).value;
-      setCart(cart.concat({name: itemName, qty: itemQty}));
+      const prevQty = cart[itemId];
+      setCart(cartItems => ({
+         ...cartItems, 
+         [itemId]: prevQty + Number(itemQty)
+        })
+        );
       setTotalQty(totalQty + Number(itemQty));
       setTotalCost(totalCost + (itemCost *itemQty));
   }
