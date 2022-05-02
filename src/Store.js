@@ -1,8 +1,13 @@
 import ItemCard from './ItemCard';
+import data from './data';
+import {useLocation} from "react-router-dom";
+
+
 
 const Store = (props) => {
-    const itemCards = props?.data?.map((item => {
-        return <ItemCard data = {item} addItemToCart = {props.handleAddItemToCartState()} key = {item.id}/>
+    const location = useLocation();
+    const itemCards = data?.map((item => {
+        return <ItemCard data = {item} addItemToCart = {location.state} key = {item.id}/>
     }));
 
     return (
