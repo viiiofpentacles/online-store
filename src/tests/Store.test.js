@@ -11,28 +11,7 @@ test('displays Store heading', () => {
 
 test('renders all item cards', () => {
     const mockAddItem = jest.fn();
-    const mockData = [
-        {
-        name: 'Ice cream',
-        cost: '14.00',
-        img: 'mockImg',
-        id: 1
-      },
-      {
-        name: 'Uniform',
-        cost: '14.00',
-        img: 'mockImg2',
-        id: 2
-      },
-      {
-        name: 'Ocean Blue',
-        cost: '14.00',
-        img: 'mockImg3',
-        id: 3
-      }
-    ]
-
-    render(<Store data = {mockData} handleAddItemToCartState = {mockAddItem} />);
+    render(<Store handleAddItemToCartState = {mockAddItem} />);
     const itemCards = screen.getAllByDisplayValue('1');
-    expect(itemCards.length).toBe(3);
+    expect(itemCards.length).toBe(6);
 });

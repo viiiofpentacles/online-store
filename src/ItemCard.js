@@ -38,7 +38,7 @@ const ItemCard = (props) => {
 
     return (
         <div className = 'item-card'>
-            <div className="item-image">{props.data.img}</div>
+            <div className="item-image"><img src={props.data.img} alt={props.data.alt} /></div>
             <div className="item-name">{props.data.name}</div>
             <div className="item-cost">{props.data.cost}</div>
             <div className="qty-input">

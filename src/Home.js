@@ -1,3 +1,5 @@
+import dragons from './images/birmingham-museums-trust-G0PuUqpMfaY-unsplash.jpg';
+
 const Home = () => {
     return (
         <main>

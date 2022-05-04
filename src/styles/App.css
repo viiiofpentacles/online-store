@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Lavishly Yours';
+  src: url('./fonts/Lavishly_Yours/LavishlyYours-Regular.ttf') format('woff');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 1px 1px 40px 2px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-family: 'Lavishly Yours';
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(182, 159, 59);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-links a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  color: rgb(121, 115, 30);
+}
+
+.menu-links a:hover {
+  color: rgb(59, 34, 1);
+  text-shadow: ;
+}
+
+h1 {
+  color: rgb(197, 164, 103);
+  text-align: center;
 }
