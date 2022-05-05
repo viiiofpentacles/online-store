@@ -1,0 +1,68 @@
+.item-card {
+    width: 40vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    padding: 2rem 2.5rem;
+    margin: 1.5rem;
+    border-radius: 3px;
+    background-color: rgb(250, 248, 237);
+    box-shadow: 1px 1px 40px 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease-out;
+}
+
+.item-card:hover {
+    background-color: rgb(255, 254, 250);
+}
+
+.item-image img {
+    width: 15vw;
+    object-fit: fill;
+}
+
+.item-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.qty-input {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 25%;
+    height: 3.5rem;
+}
+
+.qty-input input {
+    width: 3rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgb(184, 184, 184);
+
+}
+
+.add-to-cart-button,
+.qty-input button {
+  background: none;
+  border: none;
+  background-color: rgb(124, 120, 46);
+  color: rgb(253, 251, 241);
+  font-weight: 600;
+}
+.qty-input button {
+    width: 1.5rem;
+}
+
+.add-to-cart-button {
+    padding: 0.5rem 1rem;
+}
+
+.add-to-cart-button:hover,
+.qty-input button:hover {
+    cursor: pointer;
+    background-color: rgb(161, 157, 72);
+}
+
+.input-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
