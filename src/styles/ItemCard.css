@@ -52,6 +52,11 @@
     width: 1.5rem;
 }
 
+.disabled {
+    cursor: context-menu;
+    background-color: rgb(235, 233, 205);
+}
+
 .add-to-cart-button {
     padding: 0.5rem 1rem;
 }
