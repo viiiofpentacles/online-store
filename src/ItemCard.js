@@ -7,7 +7,7 @@ const ItemCard = (props) => {
 
     function reduceButton (e) {
         const button = e.target;
-        const inputField = document.querySelector(`[class="${e.target.id}"]`);
+        const inputField = document.querySelector(`#qty-input${props.data.id}`);
         if (inputField.value <= 1) {
             button.disabled = true;
             button.classList.add('disabled');
@@ -19,7 +19,7 @@ const ItemCard = (props) => {
     }
 
     function increaseButton () {
-        const button = document.querySelector('.minus-button'); 
+        const button = document.querySelector(`.minus-button${props.data.id}`); 
         button.disabled = false;
         button.classList.remove('disabled');
         setQty(Number(qty + 1));
@@ -27,8 +27,7 @@ const ItemCard = (props) => {
 
     function handleChange (e) {
         setQty(e.target.value);
-        const buttonId = e.target.className[0];
-        const minusButton = document.getElementById(buttonId);
+        const minusButton = document.querySelector(`.minus-button${props.data.id}`);
         if (e.target.value <=1) {
             minusButton.disabled = true;
             minusButton.classList.add('disabled');
@@ -62,10 +61,10 @@ const ItemCard = (props) => {
                 <div className="item-name">{props.data.name}</div>
                 <div className="item-cost">{props.data.cost}</div>
                 <div className="qty-input">
-                    <label htmlFor="qty-input">Quantity</label>
+                    <label htmlFor={`qty-input${props.data.id}`}>Quantity</label>
                     <div className='input-area'>
-                        <button className="minus-button" id={props.data.id} onClick={reduceButton}>-</button>
-                        <input type="text" value={qty} id="qty-input" className={props.data.id} onChange={handleChange} />
+                        <button className={`minus-button${props.data.id}`} onClick={reduceButton}>-</button>
+                        <input type="text" value={qty} id={`qty-input${props.data.id}`} onChange={handleChange} />
                         <button className="plus-button" onClick={increaseButton}>+</button>
                         </div>
                 </div>
