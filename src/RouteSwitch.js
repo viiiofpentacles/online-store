@@ -26,7 +26,7 @@ const RouteSwitch = () => {
   const [totalCost, setTotalCost] = useState(0);
 
   function handleAddItemToCartState (itemCost, itemId) {
-      const itemQty = document.querySelector(`[class="${itemId}"]`).value;
+      const itemQty = document.querySelector(`#qty-input${itemId}`).value;
       const prevQty = cart[itemId];
       setCart(cartItems => ({
          ...cartItems, 

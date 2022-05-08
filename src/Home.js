@@ -1,9 +1,11 @@
-import dragons from './images/birmingham-museums-trust-G0PuUqpMfaY-unsplash.jpg';
+import './styles/Home.css';
 
 const Home = () => {
     return (
         <main>
-            <h1>Home</h1>
+            <div className='home-contents'>
+            <h1>MYTH</h1>
+            </div>
         </main>
     );
 };

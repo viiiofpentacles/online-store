@@ -7,7 +7,7 @@ const Store = (props) => {
     }));
    
     return (
-        <main>
+        <main className='store-contents'>
             <h1>Store</h1>
             <div className="cards-container">
             {itemCards}
