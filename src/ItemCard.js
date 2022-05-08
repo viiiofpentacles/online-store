@@ -39,16 +39,20 @@ const ItemCard = (props) => {
     }
 
     function addToCartButton (e) {
-        if(qty <= 0) {
-        }
-        props.addItemToCart(props.data.cost, props.data.id);
         const addButton = e.target;
+        const errorMessage = document.querySelector(`.error-message${props.data.id}`);
+        if(qty <= 0) {
+            errorMessage.textContent = 'Item quantity needs to be at least 1.'
+        } else {
+            errorMessage.textContent = '';
+        props.addItemToCart(props.data.cost, props.data.id);
             addButton.textContent = 'Added!'
             addButton.disabled = true;
         setTimeout(() => {
             addButton.textContent = 'Add to Cart'
             addButton.disabled = false;
         }, "2000");
+    }
     }
 
     return (
@@ -66,7 +70,7 @@ const ItemCard = (props) => {
                         </div>
                 </div>
                 <button className="add-to-cart-button" onClick={addToCartButton}>Add to Cart</button>
-                <div className='error-message'></div>
+                <div className={`error-message${props.data.id} error`}></div>
             </div>
         </div>
     );
