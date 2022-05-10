@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/online-store/static/css/main.3f6150f8.css",
+    "main.js": "/online-store/static/js/main.b5f68bc4.js",
+    "static/media/birmingham-museums-trust-G0PuUqpMfaY-unsplash.jpg": "/online-store/static/media/birmingham-museums-trust-G0PuUqpMfaY-unsplash.3f96e4636f9278fdf57b.jpg",
+    "static/media/laura-adai-q0GUMkYUmds-unsplash.jpg": "/online-store/static/media/laura-adai-q0GUMkYUmds-unsplash.3017eb47fa4b31dc0b07.jpg",
+    "static/media/nitish-goswami-vzBixjA6ly8-unsplash.jpg": "/online-store/static/media/nitish-goswami-vzBixjA6ly8-unsplash.09351cb17389e190dfa5.jpg",
+    "static/media/nathan-anderson--eq7r7bwImg-unsplash.jpg": "/online-store/static/media/nathan-anderson--eq7r7bwImg-unsplash.dc5137922d75f4a6f072.jpg",
+    "static/media/paul-blenkhorn-gkKI23ZeaHM-unsplash.jpg": "/online-store/static/media/paul-blenkhorn-gkKI23ZeaHM-unsplash.f967307a20e974553e56.jpg",
+    "static/media/bernd-dittrich-xwt03E2VPLI-unsplash.jpg": "/online-store/static/media/bernd-dittrich-xwt03E2VPLI-unsplash.f0fd4ecdf1981f4b2b20.jpg",
+    "static/media/LavishlyYours-Regular.ttf": "/online-store/static/media/LavishlyYours-Regular.669594d7841b9bfcfe28.ttf",
+    "static/media/LibreBodoni-VariableFont_wght.ttf": "/online-store/static/media/LibreBodoni-VariableFont_wght.77fb106bf92ad1dccd14.ttf",
+    "static/media/maxim-berg-qHJiyaCTVPw-unsplash.jpg": "/online-store/static/media/maxim-berg-qHJiyaCTVPw-unsplash.98e26495a6ecec9c53be.jpg",
+    "index.html": "/online-store/index.html",
+    "main.3f6150f8.css.map": "/online-store/static/css/main.3f6150f8.css.map",
+    "main.b5f68bc4.js.map": "/online-store/static/js/main.b5f68bc4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f6150f8.css",
+    "static/js/main.b5f68bc4.js"
+  ]
+}
