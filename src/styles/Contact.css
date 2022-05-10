@@ -1,0 +1,51 @@
+.contact-contents {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-label {
+    text-align: right;
+}
+
+.contact-details {
+    width: 25%;
+    display: grid;
+    gap: 8px;
+    grid-template-rows: repeat(3, 25%);
+    grid-template-columns: 5fr 1fr;
+    padding-bottom: 1rem;
+}
+
+.feedback-input {
+    width: 25%;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    gap: 8px;
+}
+
+.submit-button {
+    justify-self: center;
+    width: 70px;
+    height: 30px;
+    background: none;
+    border: none;
+    background-color: rgb(124, 120, 46);
+    color: rgb(253, 251, 241);
+    font-weight: 600;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: rgb(161, 157, 72);
+}
+
+.submitted-text {
+    height: 1rem;
+    padding: 1rem;
+}
