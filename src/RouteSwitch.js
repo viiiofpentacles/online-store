@@ -38,7 +38,7 @@ const RouteSwitch = () => {
   }
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/online-store'>
       <Routes>
         <Route path="/" element={<App cart = {cart} totalQty = {totalQty} totalCost ={totalCost} />}>
           <Route index element={<Home />} />
