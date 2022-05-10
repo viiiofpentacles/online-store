@@ -4,5 +4,5 @@ A simple online store design with multiple routes with a shopping cart and feedb
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 
-Live view available [here] (https://viiiofpentacles.github.io/online-store/).
+Live view available [here](https://viiiofpentacles.github.io/online-store/).
 
