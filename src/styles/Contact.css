@@ -1,5 +1,6 @@
 .contact-contents {
     text-align: center;
+    padding: 1rem;
 }
 
 form {
@@ -7,26 +8,6 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.contact-label {
-    text-align: right;
-}
-
-.contact-details {
-    width: 25%;
-    display: grid;
-    gap: 8px;
-    grid-template-rows: repeat(3, 25%);
-    grid-template-columns: 5fr 1fr;
-    padding-bottom: 1rem;
-}
-
-.feedback-input {
-    width: 25%;
-    display: grid;
-    grid-template-rows: 1fr 5fr 1fr;
-    gap: 8px;
 }
 
 .submit-button {

@@ -3,7 +3,7 @@
 .home-contents h1 {
     position: absolute;
     top: 40%;
-    left: calc(50% - 4rem);
+    left: calc(50% - 6rem);
     border: 4px solid rgb(197, 164, 103);
     padding: 1rem 2rem;
     animation: fade linear 3s;
@@ -23,12 +23,6 @@
 
 h2 {
     color: rgb(197, 164, 103);
-    text-align: center;
-}
-
-.about-contents p {
-    font-size: 1.3rem;
-    padding: 0 10rem;
     text-align: center;
 }
 
