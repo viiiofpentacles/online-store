@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/online-store/static/css/main.bbee714e.css",
+    "main.css": "/online-store/static/css/main.837aed0e.css",
     "main.js": "/online-store/static/js/main.55693b8c.js",
     "static/media/birmingham-museums-trust-G0PuUqpMfaY-unsplash.jpg": "/online-store/static/media/birmingham-museums-trust-G0PuUqpMfaY-unsplash.3f96e4636f9278fdf57b.jpg",
     "static/media/laura-adai-q0GUMkYUmds-unsplash.jpg": "/online-store/static/media/laura-adai-q0GUMkYUmds-unsplash.3017eb47fa4b31dc0b07.jpg",
@@ -12,11 +12,11 @@
     "static/media/LibreBodoni-VariableFont_wght.ttf": "/online-store/static/media/LibreBodoni-VariableFont_wght.77fb106bf92ad1dccd14.ttf",
     "static/media/maxim-berg-qHJiyaCTVPw-unsplash.jpg": "/online-store/static/media/maxim-berg-qHJiyaCTVPw-unsplash.98e26495a6ecec9c53be.jpg",
     "index.html": "/online-store/index.html",
-    "main.bbee714e.css.map": "/online-store/static/css/main.bbee714e.css.map",
+    "main.837aed0e.css.map": "/online-store/static/css/main.837aed0e.css.map",
     "main.55693b8c.js.map": "/online-store/static/js/main.55693b8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbee714e.css",
+    "static/css/main.837aed0e.css",
     "static/js/main.55693b8c.js"
   ]
 }
