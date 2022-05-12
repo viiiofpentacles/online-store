@@ -17,7 +17,6 @@
 .qty-input {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 25%;
     height: 3.5rem;
 }
 

@@ -44,6 +44,11 @@
         gap: 8px;
     }
 
+    .qty-input {
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 @media (min-width: 701px) {
@@ -91,5 +96,9 @@
         display: grid;
         grid-template-rows: 1fr 5fr 1fr;
         gap: 8px;
+    }
+
+    .qty-input {
+        width: 25%;
     }
 }
