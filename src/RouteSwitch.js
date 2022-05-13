@@ -10,6 +10,7 @@ import Home from './Home';
 import Store from './Store';
 import About from './About';
 import Contact from './Contact';
+import Checkout from './Checkout';
 
 const RouteSwitch = () => {
   const [cart, setCart] = useState(
@@ -37,6 +38,36 @@ const RouteSwitch = () => {
       setTotalCost(totalCost + (itemCost *itemQty));
   }
 
+  function handleUpdateCartState (itemCost, itemId) {
+    const errorMessage = document.querySelector(`.error-message${itemId}`);
+    const itemQty = document.querySelector(`#qty-input${itemId}`).value;
+    const prevQty = cart[itemId];
+      setCart(cartItems => ({
+         ...cartItems, 
+         [itemId]: Number(itemQty)
+        })
+        );
+        if (Number(itemQty) > prevQty) {
+          setTotalQty(totalQty + Number(itemQty - prevQty));
+          setTotalCost(totalCost + (itemCost *(itemQty - prevQty)));
+          errorMessage.textContent = '';
+        } else if (Number(itemQty) === prevQty) {
+          errorMessage.textContent = 'No change to quantity.';
+        } else if (Number(itemQty) === 0) {
+          setCart(cartItems => ({
+            ...cartItems, 
+            [itemId]: 0
+           })
+           );
+         setTotalQty(totalQty - Number(prevQty));
+         setTotalCost(totalCost - (itemCost *prevQty));
+        } else {
+          setTotalQty(totalQty - Number(prevQty - itemQty));
+          setTotalCost(totalCost - (itemCost *(prevQty - itemQty)));
+          errorMessage.textContent = '';
+        }
+  }
+
     return (
         <BrowserRouter basename='/online-store'>
       <Routes>
@@ -45,6 +76,7 @@ const RouteSwitch = () => {
           <Route path ="store" element={<Store handleAddToCartState = {handleAddItemToCartState} />} />
           <Route path ="about" element={<About />} />
           <Route path ="contact" element={<Contact />} />
+          <Route path ="checkout" element={<Checkout updateCartState = {handleUpdateCartState} cart = {cart} />} />
           <Route path ="*" element={
             <main>
               <h1>Page Not Found</h1>

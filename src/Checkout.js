@@ -10,6 +10,7 @@ const Checkout = (props) => {
             itemArray.push(item);
         }
     }
+
     const filteredData = [];
     for(const dataItem of data) {
         const index = itemArray.indexOf((dataItem.id).toString());
@@ -21,10 +22,11 @@ const Checkout = (props) => {
     const renderCartItems = filteredData.map((item => {
                 return <CartItem data = {item} qty = {listCartItems[item.id]} updateCart = {props.updateCartState} key = {item.id} />;
             }));
-
+    
     return (
         <main className='checkout-contents'>
             <h1>Checkout</h1>
+            <p className='empty-message'></p>
             <div className='cart-container'>
                 {renderCartItems}
             </div>

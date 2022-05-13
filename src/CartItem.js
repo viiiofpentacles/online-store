@@ -39,9 +39,6 @@ const CartItem = (props) => {
     function updateCartButton (e) {
         const updateButton = e.target;
         const errorMessage = document.querySelector(`.error-message${props.data.id}`);
-        if(qty <= 0) {
-            errorMessage.textContent = 'Item quantity needs to be at least 1.'
-        } else {
             errorMessage.textContent = '';
         props.updateCart(props.data.cost, props.data.id);
             updateButton.textContent = 'Updated!'
@@ -51,10 +48,9 @@ const CartItem = (props) => {
             updateButton.disabled = false;
         }, "2000");
     }
-    }
 
     return (
-        <div className = 'cart-item'>
+        <div className = {`cart-item${props.data.id}`}>
             <div className="item-image"><img src={props.data.img} alt={props.data.alt} /></div>
             <div className='item-details'>
                 <div className="item-name">{props.data.name}</div>

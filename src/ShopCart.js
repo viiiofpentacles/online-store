@@ -1,7 +1,12 @@
-// goes into App as a footer, only visible with atleast one item in cart
+import { useNavigate } from "react-router-dom";
 
 const ShopCart = (props) => {
     const cartTotal = (props.totalCost).toFixed(2);
+    const navigate = useNavigate();
+   
+    function handleCheckout () {
+        navigate('/checkout');
+    } 
     
     return (
         <div className='cart'>
@@ -12,7 +17,7 @@ const ShopCart = (props) => {
                 }
             <div>Cart Total: {cartTotal}</div>
             </div>
-            <button className='checkout-button' onClick={props.handleCheckout}>Checkout</button>
+            <button className='checkout-button' onClick={handleCheckout}>Checkout</button>
         </div>
     );
 };
