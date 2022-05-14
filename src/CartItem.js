@@ -50,7 +50,7 @@ const CartItem = (props) => {
     }
 
     return (
-        <div className = {`cart-item${props.data.id}`}>
+        <div className = 'cart-item'>
             <div className="item-image"><img src={props.data.img} alt={props.data.alt} /></div>
             <div className='item-details'>
                 <div className="item-name">{props.data.name}</div>

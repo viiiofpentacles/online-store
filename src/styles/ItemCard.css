@@ -1,3 +1,5 @@
+/* includes styles for ItemCard and CartItem */
+
 .item-card {
     border-radius: 3px;
     background-color: rgb(250, 248, 237);
@@ -28,6 +30,7 @@
 
 }
 
+.update-cart-button,
 .add-to-cart-button,
 .qty-input button {
   background: none;
@@ -45,14 +48,20 @@
     background-color: rgb(235, 233, 205);
 }
 
+.update-cart-button,
 .add-to-cart-button {
     padding: 0.5rem 1rem;
 }
 
+.update-cart-button:hover,
 .add-to-cart-button:hover,
 .qty-input button:hover {
     cursor: pointer;
     background-color: rgb(161, 157, 72);
+}
+
+.cart-item {
+    border-bottom: 1px solid rgb(179, 179, 179);
 }
 
 .error {

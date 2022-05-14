@@ -1,4 +1,4 @@
-/* contains styes for App, Store and ShopCart components*/
+/* contains styes for App, Store, ShopCart and Checkout components*/
 
 @font-face {
   font-family: 'Lavishly Yours';
@@ -63,6 +63,7 @@ main,
   font-size: 1.5rem;
 }
 
+.payment-button,
 .checkout-button {
   background: none;
   border: none;
@@ -72,12 +73,13 @@ main,
   font-weight: 600;
 }
 
+.payment-button:hover,
 .checkout-button:hover {
   cursor: pointer;
   background-color: rgb(136, 132, 53);
 }
 
-.store-contents {
+.checkout-contents {
   padding-bottom: 5rem;
 }
 
@@ -90,8 +92,13 @@ main {
 100% {opacity: 1;}
 }
 
+.cart-container,
 .cards-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.payment-button {
+  margin: 1rem;
 }

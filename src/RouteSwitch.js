@@ -68,7 +68,20 @@ const RouteSwitch = () => {
         }
   }
 
-    return (
+  function handlePayment () {
+    setCart({
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      6: 0
+    });
+    setTotalQty(0);
+    setTotalCost(0);
+  }
+
+  return (
         <BrowserRouter basename='/online-store'>
       <Routes>
         <Route path="/" element={<App cart = {cart} totalQty = {totalQty} totalCost ={totalCost} />}>
@@ -76,7 +89,7 @@ const RouteSwitch = () => {
           <Route path ="store" element={<Store handleAddToCartState = {handleAddItemToCartState} />} />
           <Route path ="about" element={<About />} />
           <Route path ="contact" element={<Contact />} />
-          <Route path ="checkout" element={<Checkout updateCartState = {handleUpdateCartState} cart = {cart} />} />
+          <Route path ="checkout" element={<Checkout updateCartState = {handleUpdateCartState} cart = {cart} handlePayment = {handlePayment}/>} />
           <Route path ="*" element={
             <main>
               <h1>Page Not Found</h1>

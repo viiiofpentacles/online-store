@@ -1,4 +1,5 @@
 @media (max-width: 700px) {
+    .cart-item,
     .item-card {
         width: 80vw;
         margin: 1rem;
@@ -20,6 +21,7 @@
         display: flex;
     }
 
+    .empty-message,
     .contact-contents p,
     .about-contents p {
         font-size: 1.3rem;
@@ -52,12 +54,16 @@
 }
 
 @media (min-width: 701px) {
+    .cart-item,
     .item-card {
         width: 40vw;
         display: grid;
         grid-template-columns: 1fr 3fr;
         gap: 1rem;
         padding: 2rem 2.5rem;
+    }
+
+    .item-card {
         margin: 1.5rem;
     }
 
@@ -71,6 +77,8 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    
+    .empty-message,
     .contact-contents p,
     .about-contents p {
         font-size: 1.3rem;

@@ -21,14 +21,24 @@ const Checkout = (props) => {
 
     const renderCartItems = filteredData.map((item => {
                 return <CartItem data = {item} qty = {listCartItems[item.id]} updateCart = {props.updateCartState} key = {item.id} />;
-            }));
+    }));
     
+    function makepayment () {
+        props.handlePayment();
+        window.alert('Thank you for shopping with us!');
+    }
+
     return (
         <main className='checkout-contents'>
             <h1>Checkout</h1>
-            <p className='empty-message'></p>
+            {itemArray.length === 0 &&
+                <p className='empty-message'> There are no items in your cart.</p>
+            }
             <div className='cart-container'>
                 {renderCartItems}
+                {itemArray.length > 0 &&
+                <button onClick={makepayment} className = 'payment-button'>Make Payment</button>
+                }
             </div>
         </main>
     );
