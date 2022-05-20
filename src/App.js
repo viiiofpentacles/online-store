@@ -5,9 +5,6 @@ import ShopCart from './ShopCart';
 
 function App(props) {
 
-  function handleCheckout () {
-  }
-
   return (
     <div className="container">
       <header className="menu-header">
@@ -23,7 +20,7 @@ function App(props) {
       </header>
       <Outlet />
       {props.totalQty > 0 &&
-      <ShopCart totalQty = {props.totalQty} totalCost = {props.totalCost} handleCheckout = {handleCheckout}/>
+      <ShopCart totalQty = {props.totalQty} totalCost = {props.totalCost} />
       }
     </div>
   );
